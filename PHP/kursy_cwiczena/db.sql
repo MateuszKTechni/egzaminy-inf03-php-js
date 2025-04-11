@@ -1,0 +1,12 @@
+DROP DATABASE exchange IF EXISTS;
+
+CREATE DATABASE exchange;
+
+USE exchange;
+
+CREATE TABLE exchange_rates{
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    currency_code VARCHAR(3) NOT NULL, 
+    rate DECIMAL(10, 4) NOT NULL,
+    update_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+}

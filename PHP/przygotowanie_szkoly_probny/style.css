@@ -1,0 +1,42 @@
+body {
+  display: flex;
+}
+
+#errorMessages p {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#formuser {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.data-container {
+  width: 50%;
+}
+
+input {
+  font-size: medium;
+  border-radius: 3px;
+}
+
+label {
+  font-size: large;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}

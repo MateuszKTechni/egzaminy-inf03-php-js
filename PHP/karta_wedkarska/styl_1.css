@@ -1,0 +1,48 @@
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  background-color: DodgerBlue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#main {
+  background-color: LightBlue;
+  padding: 100px;
+}
+
+#left {
+  background-color: DodgerBlue;
+  color: white;
+  width: 20%;
+  height: 220px;
+  float: left;
+}
+
+#right,
+#middle {
+  background-color: DodgerBlue;
+  color: white;
+  width: 40%;
+  height: 220px;
+  float: left;
+  text-align: center;
+}
+
+a {
+  border: 1px dashed DimGray;
+  background-color: Gold;
+  color: DarkRed;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: DarkRed;
+  color: Gold;
+}

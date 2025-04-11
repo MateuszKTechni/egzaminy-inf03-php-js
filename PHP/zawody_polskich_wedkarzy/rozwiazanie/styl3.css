@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana;
+    padding: 0;
+    margin: 0;
+}
+
+.gora {
+    background-color: seagreen;
+    color: white;
+    line-height: 150px;
+    height: 260px;
+    font-size: 160%;
+    float: left;
+}
+
+.l {
+    width: 75%;
+}
+
+.p {
+    width: 25%;
+    text-align: right;
+}
+
+#main {
+    background-color: MintCream;
+    padding: 80px;
+    clear: both;
+}
+
+.dol {
+    background-color: SeaGreen;
+    color: white;
+    width: 50%;
+    height: 70px;
+    text-align: center;
+    float: left;
+}
+
+img {
+    box-shadow: 15px 15px 10px DimGray;
+    margin-left: 25px;
+}
+
+a {
+    text-decoration: none;
+    background-color: mintcream;
+    color: seagreen;
+    padding: 15px;
+    line-height: 70px;
+}
