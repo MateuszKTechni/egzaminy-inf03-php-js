@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo{
+    text-align: center;
+    margin: 1%;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 10px 0;
+    /* display: flex; */
+    align-items: center;
+    position: relative;
+}
+
+.radiob{
+    width: 100%;
+    display: flex;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label input[type="radio"] {
+    cursor: pointer;
+}
+
+label span {
+    cursor: pointer; 
+}
+
+input[type="text"], input[type="number"], button {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type="text"], input[type="number"], input[type="radio"], button{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #6200ea;
+}
+
+button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+#result {
+    background: #6200ea;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#motionForm{
+     margin-top: 5%;
+}

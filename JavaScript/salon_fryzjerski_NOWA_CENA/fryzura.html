@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzierstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <main>
+        <section id = "lewy">
+            <section id = "l1">
+                <h1><a href="index.html">Salon fryzjerski</a></h1>
+            </section>
+            <section id = "l2">
+                <h2>Promocja</h2>
+                        <label>
+                            <input type="radio" name="typ" id="krotkie"/> krotkie </br>
+                        </label>
+                        <label>
+                            <input type="radio" name="typ" id="srednie"/> srednie </br>
+                        </label>
+                        <label>
+                        <input type="radio" name="typ" id="poldlugie"/> poldlugie </br>
+                        </label>
+                        <label>
+                            <input type="radio" name="typ" id="dlugie"/> dlugie </br>
+                        </label>
+                        <button type="button" onclick="nowaCena()">Odkryj promocje</button>
+                        <p id="wynik"></p>
+            </section>
+            <section id = "l3">
+                <p>Witaj milo nam ze nas odwiedziles, sprawdz nasze promocje</p>
+                <h4>Kontakt: 444 555 666</h4>
+            </section>
+        </section>
+        <section id = "prawy">
+        <section id = "r1">
+            <h4><a href="fryzura.html">Ceny strzyzenia</a></h4>
+            <table>
+                <tr>
+                    <th>Dlugosci wlosow</th>
+                    <th>Cena</th>
+                </tr>
+                <tr>
+                    <td>Krotkie</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Srednie</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Poldlugie</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Dlugie</td>
+                    <td>50</td>
+                </tr>    
+            </table>
+        </section>
+        <section id = "r2">
+            <img src="obraz1.jpg" alt="Fryzjerka">
+        </section>
+    </section>
+    </main>
+    <footer>
+        Autor: Mateusz Kowal
+    </footer>
+    <script>
+    function nowaCena() {
+        let cena = 0;
+
+        if (document.getElementById("krotkie").checked) cena = 25;
+        if (document.getElementById("srednie").checked) cena = 30;
+        if (document.getElementById("poldlugie").checked) cena = 40;
+        if (document.getElementById("dlugie").checked) cena = 50;
+
+        cena -= 10;
+
+        document.getElementById("wynik").innerHTML = "Nowa cena: " + cena + " zł";
+    }
+
+    </script>
+</body>
+</html>

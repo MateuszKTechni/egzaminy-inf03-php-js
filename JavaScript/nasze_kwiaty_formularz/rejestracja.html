@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header><h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1></header>
+    <main>
+        <form action="">
+            <section id="blokdane" class="blokglowny">
+                <h2>Dane osobowe</h2>
+                <input type="text" name = "imie" id = "imie" placeholder="Wpisz imię..." required>
+                <input type="text" name = "nazwisko" id = "nazwisko" placeholder="Wpisz nazwisko..." required>
+                <button onclick="NastepnaKarta(1)">Następna karta</button>
+            </section>
+            <section id="blokkontakt" class="blokglowny ukryty">
+                <h2>Dane kontaktowe</h2>
+                <input type="email" name = "email" id = "email" placeholder="Wpisz email..." >
+                <input type="tel" name = "tel" id = "tel" placeholder="Wpisz numer tel..." >
+                <button onclick="NastepnaKarta(2)">Następna karta</button>
+            </section>
+            <section id="blokhaslo" class="blokglowny ukryty">
+                <h2>Hasło do logowania</h2>
+                <input type="password" name = "password" id = "password" placeholder="Wpisz hasło..." required>
+                <input type="password" name = "password2" id = "password2" placeholder="Powtorz hasło..." required>
+                <button onclick="Zatwierdz(3)">Następna karta</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <section class = "blok">
+            <video controls>
+                <source src="motyl.mp4" type="video/mp4">
+                Przeglądarka nie obsługuje tego formatu
+            </video>
+        </section>
+        <section class = "blok">
+            <h3>Plan konferencji</h3>
+            <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td> Pielęgnacja roślin</td>
+            </tr>
+            <tr>
+                <td>13:00 - 15:00</td>
+                <td>Targi kwiatowe</td>
+            </tr>
+        </table>
+        </section>
+        <section class = "blok">
+            <a href="https://kwiaty.pl/"><p>Internetowa kwiaciarnia</p></a>
+        </section>
+        <section class = "blok">
+            <p>Prace wykonal: Mateusz Kowal</p>
+        </section>
+    </footer>
+    <script>
+        function NastepnaKarta(id) {
+            let pokazBlok = "";
+
+            if (id === 1) {
+                pokazBlok = "blokkontakt";
+            } else if (id === 2) {
+                pokazBlok = "blokhaslo";
+            }
+
+            document.querySelectorAll(".blokglowny").forEach(b1 => {
+                b1.classList.add("ukryty");
+            });
+
+            document.querySelector(`#${pokazBlok}`).classList.remove("ukryty");
+        }
+
+        function Zatwierdz(){
+            const imie = document.querySelector("#imie").value;
+            const nazwisko = document.querySelector("#nazwisko").value;
+            const password = document.querySelector("#password").value;
+            const password2 = document.querySelector("#password2").value;
+
+            if(password == password2){
+                console.log(`Witaj ${imie} ${nazwisko}`)
+            }else{
+                alert("Hasla roznia sie")
+            }
+        }
+    </script>
+</body>
+</html>

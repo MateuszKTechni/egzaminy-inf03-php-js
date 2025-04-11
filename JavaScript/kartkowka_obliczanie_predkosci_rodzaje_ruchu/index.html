@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie drogi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <form id="motionForm">
+            <div id="logo"> 
+                <img src="logo.svg" width="200px">
+            </div>
+
+            <label class="radiob">
+                <input type="radio" name="motionType" value="przyspieszony"> Ruch jednostajnie przyspieszony
+            </label>
+
+            <label class="radiob">
+                <input type="radio" name="motionType" value="opozniony"> Ruch jednostajnie opóźniony
+            </label>
+
+            <label class="radiob">
+                <input type="radio" name="motionType" value="prostoliniowy"> Ruch prostoliniowy jednostajny
+            </label>
+
+            <label for="v0">Prędkość początkowa v0 (m/s):
+                <input type="number" id="v0" name="v0">
+            </label>
+
+            <label for="t">Czas t (s):
+                <input type="number" id="t" name="t">
+            </label>
+
+            <label for="a">Przyspieszenie a (m/s^2):
+                <input type="number" id="a" name="a">
+            </label>
+            
+            <button type="button" id="calculate">Oblicz drogę</button>
+            <div id="result">Droga: </div>
+
+        </form>
+
+    <script src="physics.js"></script>
+</body>
+</html>

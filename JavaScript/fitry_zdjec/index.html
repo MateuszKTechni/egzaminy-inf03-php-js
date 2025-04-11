@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Filtry</title>
+  </head>
+  <body>
+    <h1>Transformacja obrazów</h1>
+    <img src="./lenna.png" id="image" alt="" />
+
+    <div>
+      <h3>Filtry</h3>
+      <label>
+        <input type="checkbox" id="blur" />
+        blur
+      </label>
+      <label>
+        <input type="checkbox" id="sepia" />
+        sepia
+      </label>
+      <label>
+        <input type="checkbox" id="negatyw" />
+        Negatyw
+      </label>
+    </div>
+
+    <div>
+      <h3>Kolory</h3>
+      <button id="color">Kolory</button>
+      <button id="grayscale">Czarno-biały</button>
+    </div>
+
+    <div>
+      <h3>Przezroczystość</h3>
+      <input type="range" id="opacity" min="0" max="200" value="100" />
+      <button id="applyOpacity">Zastosuj</button>
+    </div>
+
+    <div>
+      <h3>Jasność</h3>
+      <input type="range" id="brightness" min="0" max="200" value="100" />
+      <button id="applyBri">Zastosuj</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
