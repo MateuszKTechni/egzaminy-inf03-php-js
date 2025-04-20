@@ -1,2 +1,2 @@
 # egzaminy-inf03-php-js
-egzaminy zawodowe inf03 rozwiazane przez Mateusz Kowal
+egzaminy zawodowe inf03 rozwiazane przez Mateusza Kowala
