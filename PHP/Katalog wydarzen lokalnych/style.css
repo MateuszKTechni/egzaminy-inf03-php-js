@@ -1,0 +1,23 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;   
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.event {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.event img {
+    height: 20vh;
+    width: 100%;    
+}
