@@ -3,8 +3,8 @@
     $query1 = "SELECT * FROM users";
     $result1 = mysqli_query($connect, $query1);
     while(mysqli_fetch_array($result1)){
-        echo"<h1>$row[0]</h1>"
-        echo"<h1>$row[1]</h1>"
+        echo"<h1>$row[0]</h1>";
+        echo"<h1>$row[1]</h1>";
     }
     mysqli_close($connect);
 ?>
