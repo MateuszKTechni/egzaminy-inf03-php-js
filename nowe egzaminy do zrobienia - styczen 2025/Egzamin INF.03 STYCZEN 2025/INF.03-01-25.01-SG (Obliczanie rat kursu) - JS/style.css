@@ -1,0 +1,52 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+}
+
+nav,
+footer{
+    background-color: #625B5B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+li{
+   margin-left: 40px;
+   list-style-type: circle;
+}
+
+nav a{
+    font-weight: bold;
+    background-color: #eaeaea;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 20px;
+}
+
+nav a:hover{
+    background-color: #625B5B;
+    color: #eaeaea;
+    border: 1px solid #eaeaea;
+}
+
+table{
+    border: 1px dashed #625B5B;
+    width: 60%;
+    padding-left:40px;
+    text-align: center;
+}
+
+.kontrolki{
+    padding: 5px;
+}

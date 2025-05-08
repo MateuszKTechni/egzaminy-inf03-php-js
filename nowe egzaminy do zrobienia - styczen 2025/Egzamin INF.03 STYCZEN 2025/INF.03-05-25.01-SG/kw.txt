@@ -1,0 +1,4 @@
+1: SELECT szkolenia.Data, szkolenia.Temat FROM szkolenia GROUP BY szkolenia.Data ASC;
+2: SELECT szkolenia.Data, szkolenia.Temat, trenerzy.Imie, trenerzy.Nazwisko FROM szkolenia JOIN trenerzy ON szkolenia.Id_trenera = trenerzy.Id;
+3: SELECT trenerzy.Imie, trenerzy.Nazwisko, COUNT(szkolenia.Id) FROM trenerzy JOIN szkolenia ON szkolenia.Id_trenera = trenerzy.Id GROUP BY trenerzy.Imie, trenerzy.Nazwisko
+4: ALTER TABLE zapisy CHANGE Id_klienta Id_sluchacza INT;

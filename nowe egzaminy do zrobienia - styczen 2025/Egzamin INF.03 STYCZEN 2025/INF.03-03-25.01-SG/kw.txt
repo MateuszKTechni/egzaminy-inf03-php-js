@@ -1,0 +1,4 @@
+1: SELECT imieniny.data FROM imieniny WHERE imieniny.imiona LIKE '%%Kuba%%';
+2: SELECT imieniny.imiona FROM imieniny WHERE imieniny.data LIKE '05-%%';
+3: SELECT COUNT(imieniny.data) FROM imieniny WHERE imieniny.imiona LIKE "%%mir%%";
+4: ALTER TABLE imieniny ADD COLUMN zyczenia VARCHAR(500);

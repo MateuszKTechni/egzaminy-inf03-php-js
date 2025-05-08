@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Montaz paneli podlogowych</title>
+</head>
+<body>
+    <header><h1>Montaz paneli podlogowych</h1></header>
+    <nav>
+        <a href="index.html">Strona glowna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Koszty - Kalkulator</a>
+    </nav>
+    <main>
+        <h1>Kalkulator kosztow montazu</h1>
+        <label for="roomWidth"> Szerokość pomieszczenia:
+            <input type="number" id= "roomWidth" name ="roomWidth" required>
+        </label>
+        <label for="roomLenght">Dlugosc pomieszczenia:
+            <input type="number" id ="roomLenght" name ="roomLenght" required>
+        </label><br>
+        <p>Typ panelu</p>
+        <label for="laminowane">Panele laminowane
+            <input type="radio" name="typPanelu" id="laminowane" value="laminowane">
+        </label><br>
+        <label for="winylowe">Panele winylowe
+            <input type="radio" name="typPanelu" id="winylowe" value = "winylowe">
+        </label><br>
+        <label for="deska">Deska podlogowa
+            <input type="radio" name="typPanelu" id="deska" value = "deska">
+        </label><br>
+        <input type="button" value="Oblicz koszt" id="oblicz" onclick="obliczKoszt()"><br>
+        <p id = "wynik"></p>
+    </main>
+    <footer><h5>autor: Mateusz K</h5></footer>
+</body>
+<script>
+    function obliczKoszt(){
+        const dlugosc = parseFloat(document.getElementById("roomLenght").value);
+        const szerokosc = parseFloat(document.getElementById("roomWidth").value);
+        const typPaneluRadio = document.querySelector('input[name="typPanelu"]:checked');
+        const wynikParagraf = document.getElementById("wynik");
+
+        if (isNaN(szerokosc) || isNaN(dlugosc) && szerokosc <= 0 || dlugosc <= 0) {
+            wynikParagraf.textContent = "Wprowadź poprawne dane.";
+            return;
+        }
+
+        if (!typPaneluRadio) {
+            wynikParagraf.textContent = "Wybierz typ panelu.";
+            return;
+        }
+
+        const wybranyTyp = typPaneluRadio.value;
+        const kosztyPaneli = {
+            laminowane: 12,
+            winylowe: 14,
+            deska: 18
+        };
+
+        const kosztZaMetr = kosztyPaneli[wybranyTyp];
+        const polePowierzchni = szerokosc * dlugosc;
+        const kosztMontazu = polePowierzchni * kosztZaMetr;
+
+        wynikParagraf.innerHTML = `Pole powierzchni pomieszczenia: ${polePowierzchni}, koszt montażu ${kosztMontazu}`;
+    }
+</script>
+</html>

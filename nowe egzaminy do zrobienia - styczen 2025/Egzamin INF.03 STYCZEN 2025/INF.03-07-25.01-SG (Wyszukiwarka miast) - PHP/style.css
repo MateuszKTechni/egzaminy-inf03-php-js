@@ -1,0 +1,64 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: LightSalmon;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#left1 {
+    height: 400px;
+}
+
+#left2 {
+    background-color: DarkSalmon;
+    height: 100px;
+}
+
+#right {
+    background-color: DarkSalmon;
+    width: 70%;
+    height: 500px;
+    overflow: auto;
+}
+
+#filtr {
+    font-style: italic;
+    font-size: 200%;
+    padding: 10px;
+}
+
+#filtr:hover {
+    color: GhostWhite;
+}
+
+td,
+th {
+    border: 1px dotted Maroon;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+    
+}

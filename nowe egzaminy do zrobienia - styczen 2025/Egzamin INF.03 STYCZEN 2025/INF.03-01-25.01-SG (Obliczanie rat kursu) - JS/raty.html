@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kursy komputerowe</title>
+</head>
+<body>
+        <header><img src="klawiatura.jpg" alt="kursy komputerowe"></header>
+        <nav>
+            <a href="index.html">Strona Glowna</a>
+            <a href="raty.html">Koszt Rat</a>
+            <a href="https://moje-szkolenia.pl/">Nasz Partner</a>
+        </nav>
+        <main>
+            <section class="kontrolki">
+            <h3>Oblicz miesiaczna rate</h3>
+            <label for="React">
+                <input type="checkbox" name="React" id="React"> Kurs React.js
+            </label><br>
+            <label for="JavaScript">
+                <input type="checkbox" name="JavaScript" id="JavaScript"> Kurs JavaScript
+            </label><br>
+            <label for="raty">Liczba rat: 
+                <input type="number" id="raty" name="raty">
+            </label><br>
+            <select name="miasta" id="miasta">
+                <option id = "Warszawa">Warszawa</option>
+                <option id = "Katowice">Katowice</option>
+                <option id = "Gdansk">Gdansk</option>
+            </select><br>
+            <button type="submit" onclick="oblicz()">Oblicz</button><br>
+            <p id = "wynik"></p>
+        </section>
+    </main>
+        <footer>Autor Strony: Mateusz K</footer>
+</body>
+<script src="main.js"></script>
+</html>
