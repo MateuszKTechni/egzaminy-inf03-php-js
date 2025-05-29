@@ -17,7 +17,7 @@
                 <li>Miasta</li>
                 <li>Przyroda</li>
                 <li>Samochody</li>
-        </ul>
+            </ul>
         </section>
         <section id="middle">
             <?php

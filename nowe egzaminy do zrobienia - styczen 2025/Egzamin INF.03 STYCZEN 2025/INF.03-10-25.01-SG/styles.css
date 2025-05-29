@@ -1,0 +1,57 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header, footer{
+    background-color: #FFD966;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+footer{
+    font-size: 120%;
+}
+
+#lewy{
+    background-color: #FFD966;
+    width: 25%;
+    height: 450px;
+}
+
+#prawy{
+    background-color: #c5e0b4;
+    width: 75%;
+    height: 450px;
+    text-align: center;
+    box-shadow:inset 0px 0px 15px black;
+}
+
+table, th, td{
+   border: 1px solid black; 
+}
+
+table{
+    margin: auto;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+li{
+    list-style: square;
+    line-height: 1.5;
+}
+
+a, h4{
+    color: seagreen;
+}
+
+main{
+    display: flex;
+}
+
+img{
+    width: 320px;
+}

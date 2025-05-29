@@ -1,0 +1,4 @@
+SELECT zawodnicy.pseudonim FROM zawodnicy WHERE zawodnicy.data_zdobycia LIKE '2020-07-%%';
+SELECT pseudonim, tytul FROM zawodnicy WHERE klasa = '3A' AND tytul IS NOT NULL AND tytul <> '';
+SELECT pseudonim, klasa, ranking FROM zawodnicy ORDER BY ranking DESC LIMIT 10;
+SELECT pseudonim, data_zdobycia, DATEDIFF(CURRENT_DATE, data_zdobycia) AS dni FROM zawodnicy WHERE tytul IS NOT NULL AND data_zdobycia IS NOT NULL;

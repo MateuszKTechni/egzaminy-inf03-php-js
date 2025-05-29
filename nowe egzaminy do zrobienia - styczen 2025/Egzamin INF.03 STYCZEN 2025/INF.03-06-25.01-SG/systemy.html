@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemy liczbowe</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <img src="cyfry.gif" alt="Cyfry szesnastkowe">
+        <h1>Pozycyjne systemy liczbowe</h1>
+    </header>
+    <main>
+    <section id = "l">
+        <table>
+            <thead>
+                <tr>
+                    <th>hex</th>
+                    <th>bin</th>
+                    <th>dec</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>1010</td>
+                    <td>30</td>
+                </tr>                
+                <tr>
+                    <td>B</td>
+                    <td>1011</td>
+                    <td>11</td>
+                </tr>               
+                <tr>
+                    <td>C</td>
+                    <td>1100</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>1101</td>
+                    <td>13</td>
+                </tr>     
+                <tr>
+                    <td>E</td>
+                    <td>1110</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>1111</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id = "m">
+        <input type="number" id = "decimalNumber" name  = "decimalNumber" placeholder="Wpisz liczbę dziesiętną" required>
+        <input type="submit" value="Przelicz na binarny" onclick="convertToBinary()">
+        <p id = "wynik">Brak obliczen.</p>
+    </section>
+    <section id = "r">
+        <h2>Slowniczek</h2>
+        <dl>
+        <dt>Binarny</dt>
+        <dd>pozycyjny system liczbowy, w którym podstawą jest liczba 2, a do zapisu liczb potrzebne są tylko dwie cyfry: 0 i 1.</dd>
+        <dt>Decymalny</dt>
+        <dd>pozycyjny system liczbowy, w którym podstawą jest liczba 10; do zapisu liczb stosuje się 10 cyfr: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.</dd>
+        <a href="https://szesnastkowy_system_liczbowy.pl"><dt>Heksadecymalny</dt></a>
+        <dd>pozycyjny system liczbowy, w którym podstawą jest liczba 16. Do zapisu liczb w tym systemie potrzebne jest szesnaście znaków. </dd>
+        </dl>
+    </section>
+    </main>
+    <footer>
+        <p>Strone opracowal: <em>Mateusz K</em></p>
+    </footer>
+</body>
+<script>
+function convertToBinary() {
+    const input = document.getElementById('decimalNumber');
+    const wynik = document.getElementById('wynik');
+    
+    let binarna = "";
+    while (liczba > 0) {
+        binarna = (liczba % 2) + binarna;
+        liczba = Math.floor(liczba / 2);
+    }
+
+    if (binarna === "") binarna = "0";
+
+    let wynikZGrupami = ""; 
+    for (let i = binarna.length; i > 0; i -= 4) {
+        let start = Math.max(i - 4, 0);
+        let grupa = binarna.substring(start, i);
+        wynikZGrupami = grupa + " " + wynikZGrupami;
+    }
+
+    wynik.innerHTML = wynikZGrupami.trim() + "<sub>2</sub>";
+}
+</script>
+
+
+</html>

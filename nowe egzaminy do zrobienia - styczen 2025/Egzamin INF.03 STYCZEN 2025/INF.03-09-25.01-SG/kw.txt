@@ -1,0 +1,4 @@
+SELECT gory.pasmo, gory.nazwa_gory, gory.wysokosc FROM gory GROUP BY gory.wysokosc DESC LIMIT 10;
+SELECT osoby.imie, osoby.nazwisko, osoby.funkcja, osoby.email FROM osoby;
+INSERT INTO osiagniecia (gora_id, osoba_id, data_zdobycia) VALUES (182, 4, '2024-06-08');
+INSERT INTO osoby (nazwisko, imie, funkcja, email) VALUES ('M', 'Miłosz', 'uczestnik', 'm.milosz@zdobywcyxyz.pl');

@@ -1,0 +1,4 @@
+SELECT nagrody.nazwa, nagrody.opis, nagrody.cena FROM nagrody ORDER BY RAND() LIMIT 5;
+SELECT * FROM nagrody WHERE nagrody.cena BETWEEN 100 and 1000 and nagrody.ilosc_sztuk > 2;
+DELETE FROM nagrody WHERE cena IS NULL OR cena = 0;
+SELECT nazwa, cena, data_dodania FROM nagrody WHERE data_dodania LIKE '2021-08-%%' ORDER BY data_dodania ASC;

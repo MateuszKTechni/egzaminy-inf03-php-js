@@ -60,7 +60,7 @@
         </section>
     </main>
     <footer>
-        <p>Stronę wykonał: Chriskyy#0181</p>
+        <p>Stronę wykonał: Mateusz K</p>
     </footer>
 </body>
 
