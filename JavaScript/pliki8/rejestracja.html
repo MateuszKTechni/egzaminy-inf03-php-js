@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sklep - rejestracja</title>
+  <link rel="stylesheet" href="styl.css">
+  <script src="skrypt.js" defer></script>
+</head>
+<body>
+  <section id="caly_lewy">
+    <img src="obraz.png" alt="promocje">
+    <h2>Sprawdź promocje</h2>
+    <table>
+      <tr><th>co?</th><th>ile taniej?</th></tr>
+      <tr><td>ubrania</td><td>15%</td></tr>
+      <tr><td>buty</td><td>25%</td></tr>
+    </table>
+  </section>
+
+  <section id="caly_prawy">
+    <header>
+      <h1>Zarejestruj się w sklepie</h1>
+    </header>
+
+    <main>
+      <input type="button" value="Klient" onclick="pokaz(1)">
+      <input type="button" value="Adres" onclick="pokaz(2)">
+      <input type="button" value="Kontakt" onclick="pokaz(3)">
+
+      <section class="bloki" id="blok1">
+        <p>Imię</p><input type="text" placeholder="Wpisz dane..." onblur="zmien()">
+        <p>Nazwisko</p><input type="text" onblur="zmien()">
+        <p>Data urodzenia</p><input type="date" onblur="zmien()">
+      </section>
+
+      <section class="bloki" id="blok2">
+        <p>Ulica</p><input type="text" onblur="zmien()">
+        <p>Numer</p><input type="number" onblur="zmien()">
+        <p>Miasto</p><input type="text" onblur="zmien()">
+      </section>
+
+      <section class="bloki" id="blok3">
+        <p>Numer komórkowy</p><input type="tel" onblur="zmien()">
+        <p><input type="checkbox"> Akceptuję RODO</p>
+        <input type="button" value="Zatwierdź dane" onclick="zatwierdz()">
+      </section>
+    </main>
+
+    <section id="pasek_postepu">
+      <div id="postep"></div>
+    </section>
+
+    <footer>
+      <h4>Rejestrację do sklepu wykonał: Mateusz K</h4>
+    </footer>
+  </section>
+</body>
+<script>
+    function pokaz(nr){
+        document.getElementById("blok1").style.display = "none";
+        document.getElementById("blok2").style.display = "none";
+        document.getElementById("blok3").style.display = "none";
+        document.getElementById("blok" + nr).style.display = "block";
+    }
+    let postep = 4
+    function zmien(){
+        if (postep < 100)postep += 12;{
+            document.getElementById("postep").style.width = postep + "%";
+        }
+    }
+    function zatwierdz() {
+      alert("Dane zostały zatwierdzone.");
+    }
+</script>
+</html>

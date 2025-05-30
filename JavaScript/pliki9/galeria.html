@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header><h1>Zwiedzamy Polske</h1></header>
+    <main>
+        <section id = "lewy">
+            <input type="button" value="<" id="toLeft" onclick="toLeft()">
+        </section>
+        <section id = "srodek">
+            <img src="1.jpg" alt="Aktywne zdjecie">
+        </section>
+        <section id = "prawy">
+            <input type="button" value=">" id="toRight" onclick="toRight()">
+        </section>
+    </main>
+        <section id = "miniatury">
+            <img src="1.jpg" alt="Gdańsk">
+            <img src="2.jpg" alt="Kraków">
+            <img src="3.jpg" alt="Niedzica">
+            <img src="4.jpg" alt="Pieniny">
+            <img src="5.jpg" alt="Szklarska Poręba">
+            <img src="6.jpg" alt="Tatry">
+            <img src="7.jpg" alt="Wrocław">
+        </section>
+    <footer><h3>Autorem galerii jest: Mateusz K</h3>
+        <p>2104u921092u</p>
+        <a href="https://pixabay.com" target="_blank">Wiecej zdjec</a>
+    </footer>
+</body>
+<script>
+    function toLeft(){
+        const img = document.querySelector("img");
+        const currImg = parseInt(img.getAttribute("src").charAt(0));
+        if(currImg > 1){
+            img.setAttribute("src", (currImg - 1) + ".jpg");
+        } else {
+            img.setAttribute("src", "7.jpg");
+        }
+    }
+
+    function toRight(){
+        const img = document.querySelector("img");
+        const currImg = parseInt(img.getAttribute("src").charAt(0));
+        if(currImg < 7){
+            img.setAttribute("src", (currImg + 1) + ".jpg");
+        } else {
+            img.setAttribute("src", "1.jpg");
+        }
+    }
+</script>
+</html>

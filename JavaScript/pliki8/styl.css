@@ -1,0 +1,109 @@
+* {
+  font-family: Cambria;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: Linen;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#caly_lewy {
+  background-color: SteelBlue;
+  color: white;
+  text-align: center;
+  width: 25%;
+  height: 510px;
+  margin: 0 1%;
+  box-shadow: 4px 4px 5px DimGray;
+}
+
+#caly_lewy img {
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px dotted Navy;
+  padding: 5px;
+}
+
+#caly_prawy {
+  width: 73%;
+}
+
+header {
+  background-color: SteelBlue;
+  color: white;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+}
+
+main {
+  background-color: white;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+}
+
+input[type="button"] {
+  background-color: SteelBlue;
+  color: white;
+  width: 20%;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 130%;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="button"]:hover {
+  background-color: Navy;
+}
+
+.bloki {
+  background-color: LightBlue;
+  margin-right: 80px;
+  padding: 10px;
+  display: none;
+  margin-top: 20px;
+}
+
+.bloki input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#blok1 {
+  display: block;
+}
+
+#pasek_postepu {
+  background-color: LightGrey;
+  width: 73%;
+  margin-bottom: 10px;
+}
+
+#postep {
+  background-color: Navy;
+  width: 4%;
+  height: 30px;
+}
+
+footer {
+  background-color: SteelBlue;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
