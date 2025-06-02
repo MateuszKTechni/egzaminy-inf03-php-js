@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>malarz</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <main>
+        <section id ="lewy">
+            <h2>Menu</h2>
+            <ol>
+                <li><a href="mieszamy.html">Mieszamy</a></li>
+                <li><a href="cena.html">Wyceniamy</a></li>
+            </ol>
+        </section>
+        <section id ="srodek">
+            <h2>Zapotrzebowanie na farbe</h2>  
+            <form action="">
+                <label for="powierzchnia"><p>Powierzchnia malowania (m<sup>2</sup>):</p>
+                    <input type="number" id = "powierzchnia" name = "powierzchnia">
+                </label>
+                <button type="button" id = "oblicz" name = "oblicz" onclick="obliczPow()">Policz</button>
+            </form>
+            <p id = "wynik"></p>
+        </section>
+        <section id ="prawy">
+            <img src="obraz.png" alt="Probki farb">
+        </section>
+    </main>
+    <footer>
+        <h3>Malarz</h3>
+        <p>Strone opracowal: Mateusz K</p>
+    </footer>
+</body>
+<script>
+    function obliczPow(){
+        const wielokoscPowierzchni = parseFloat(document.getElementById("powierzchnia").value);
+        const ilePuszekWynik = document.getElementById("wynik");
+        
+        if(!isNaN(wielokoscPowierzchni) && wielokoscPowierzchni <= 0){
+            ilePuszekWynik.textContent = "Podaj poprawna wartosc";
+        }
+
+        const ileNam2 = 4;
+        const iloscPuszek = Math.ceil(wielokoscPowierzchni/ileNam2);
+
+        ilePuszekWynik.textContent = `Liczba potrzebnych puszek ${iloscPuszek}`
+    }
+</script>
+</html>

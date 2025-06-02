@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>
+        Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em>
+        </h1>
+    </header>
+    <main>
+        <section class = "bloki">
+            <section id = "blok1">
+                <h2>
+                    Dane osobowe
+                </h2>
+                <form action="">
+                    <input type="text" id="imie" name = "imie" placeholder="Wpisz imie..." required>
+                    <input type="text" id="nazwisko" name = "nazwisko" placeholder="Wpisz nazwisko..." required>
+                    <button type="button" id="Page1" name = "nextPage" onclick="nastepnaKarta2()">Nastepna karta</button>
+                </form>
+            </section>
+            <section id = "blok2">
+                <h2>
+                    Dane kontaktowe
+                </h2>
+                <form action="">
+                    <input type="email" id = "gmail" name = "gmail" placeholder="Wpisz email..." required>
+                    <input type="tel" id = "telefon" name = "telefon" placeholder="Wpisz numer telefonu..." required>
+                    <button type="button" id="Page2" name = "nextPage" onclick="nastepnaKarta3()">Nastepna karta</button>
+                </form>
+            </section>
+            <section id = "blok3">
+                <h2>
+                    Hasło do logowania
+                </h2>
+                <form action="">
+                    <input type="password" id="passwdSt" name="passwdSt" placeholder="Podaj haslo..." required>
+                    <input type="password" id="passwdNd" name="passwdNd" placeholder="Powtorz haslo..." required>
+                    <button type="button" id = "wyslij" name = "wyslij" onclick="wyslijFormularz()"> Wyslij formularz</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <section class = footers>
+        <section id = "footer1">
+            <video controls>
+                <source src="motyl.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section id = "footer2">
+            <h3>
+                Plan konferencji
+            </h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>9:00 - 12:00</td>
+                        <td>Pielegnacia roslin</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 15:00</td>
+                        <td>Targi kwiatowe</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id = "footer3">
+            <a href="https://Kwiaty.pl"><p>Internetowa kwiaciarnia</p></a>
+        </section>
+        <section id = "footer4">
+            <p>Formularz wykonal: Mateusz K</p>
+        </section>
+    </section>
+</body>
+<script>
+    function nastepnaKarta2() {
+        const blokPierwszy = document.getElementById("blok1");
+        const blokDrugi = document.getElementById("blok2");
+
+        blokPierwszy.style.display = "none";
+        blokDrugi.style.display = "block";
+    }
+
+    function nastepnaKarta3() {
+        const blokDrugi = document.getElementById("blok2");
+        const blokTrzeci = document.getElementById("blok3");
+
+        blokDrugi.style.display = "none";
+        blokTrzeci.style.display = "block";
+    }
+
+    function wyslijFormularz() {
+        const hasloPierwsze = document.getElementById("passwdSt").value;
+        const hasloDrugie = document.getElementById("passwdNd").value;
+        const imie = document.getElementById("imie").value;
+        const nazwisko = document.getElementById("nazwisko").value;
+
+        if (hasloPierwsze !== hasloDrugie) {
+            alert("Podane hasła różnią się");
+            return;
+        }
+
+        console.log(`Witaj ${imie} ${nazwisko}`);
+    }
+</script>
+
+</html>

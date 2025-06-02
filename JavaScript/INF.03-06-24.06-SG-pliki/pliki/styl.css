@@ -1,0 +1,72 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+header {
+    background-color: #C2185B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    background-image: url(tulipany.png);
+    height: 500px;
+}
+
+.bloki {
+    display: flex;
+}
+
+#blok1, #blok2, #blok3 {
+    background-color: #fce4ec;
+    width: 25%;
+    height: 300px;
+    margin: 25px;
+    padding: 16px;
+}
+
+#blok2, #blok3 {
+    display: none;
+}
+
+.bloki form input {
+    width: 80%;
+    height: 30px;
+    margin: 10px;
+}
+
+.bloki form button {
+    background-color: #C2185B;
+    color: white;
+    margin-top: 50px;
+    margin-left: 60%;
+    padding: 20px;
+    border: none;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+.footers {
+    display: flex;
+    width: 100%;
+}
+
+#footer1, #footer2, #footer3, #footer4 {
+    background-color: #C2185B;
+    color: white;
+    width: 25%;
+    height: 240px;
+}
+
+p {
+    padding-top: 20px;
+}
+
+a {
+    color: white;
+}

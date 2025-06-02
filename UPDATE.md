@@ -1,1 +1,0 @@
-Jestem w trakcie robienia egzaminow ze stycznia 2025, na chwile obecna (20.04) zrobilem juz 3 egzaminy - dodam wszystkie 14 egzaminow jak je skoncze (uporzadkuje je rowniez do folderow php / js)
