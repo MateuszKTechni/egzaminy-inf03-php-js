@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <main>
+        <section id="lewy">
+            <h1>Konfigurator stylu</h1>
+
+            <p>Podaj kolor tła</p>
+            <div class="przyciski">
+                <button onclick="zmienTlo('Indigo')">Indigo</button>
+                <button onclick="zmienTlo('SteelBlue')">SteelBlue</button>
+                <button onclick="zmienTlo('Olive')">Olive</button>
+            </div>
+
+            <p>Podaj kolor czcionki</p>
+            <select onchange="zmienKolor(this.value)">
+                <option value="white">White</option>
+                <option value="tan">Tan</option>
+                <option value="bisque">Bisque</option>
+                <option value="plum">Plum</option>
+            </select>
+
+            <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+            <input type="text" value="100%" oninput="zmienRozmiar(this.value)">
+
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <label><input type="checkbox" checked onchange="zmienRamke(this.checked)"> Rysuj ramkę</label>
+
+            <p>Jaki jest typ punktora listy?</p>
+            <label><input type="radio" name="punktor" checked onclick="zmienPunktor('disc')"> dysk</label><br>
+            <label><input type="radio" name="punktor" checked onclick="zmienPunktor('square')"> kwadrat</label><br>
+            <label><input type="radio" name="punktor" checked onclick="zmienPunktor('circle')"> okrąg</label>
+        </section>
+
+        <section id="prawy">
+            <div class="gora">
+                <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+                <ul>
+                    <li>element 1</li>
+                    <li>element 2</li>
+                    <li>element 3</li>
+                </ul>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut malesuada erat, in lacinia velit. Etiam et arcu nec erat volutpat rutrum.</p>
+        </section>
+    </main>
+    <footer>
+        Autor: Mateusz K
+    </footer>
+</body>
+<script>
+    function zmienTlo(kolor){
+        document.getElementById('prawy').style.backgroundColor = kolor;
+    }
+
+    function zmienKolor(kolor){
+        document.getElementById('prawy').style.color = kolor;
+    }
+
+    function zmienRozmiar(rozmiar){
+        document.getElementById('prawy').style.fontSize = rozmiar;
+    }
+
+    function zmienRamke(wlaczona){
+        const img = document.querySelector('#prawy img');
+        img.style.border = wlaczona ? '1px solid white' : 'none';
+    }
+
+    function zmienPunktor(typ){
+        document.getElementById('#prawy ul').style.listStyleType = typ;
+    }
+</script>
+</html>

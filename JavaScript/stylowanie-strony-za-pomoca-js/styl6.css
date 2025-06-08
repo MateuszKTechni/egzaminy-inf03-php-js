@@ -1,0 +1,68 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#lewy {
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#prawy {
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: DimGray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.gora {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.gora img {
+    padding: 10px;
+    border: 1px solid white;
+    max-width: 100%;
+    height: auto;
+}
+
+.gora ul {
+    list-style-type: disc; /* domyślny */
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+#prawy p {
+    padding: 10px;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
