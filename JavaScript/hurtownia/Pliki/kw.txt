@@ -1,0 +1,5 @@
+SELECT nazwa, ilosc, producenci.nazwaProd FROM materialy JOIN producenci ON materialy.Producenci_id = producenci.id WHERE materialy.ilosc > 9;
+SELECT materialy.nazwa, producenci.nazwaProd, jednostki.nazwaJedn FROM materialy JOIN producenci ON materialy.Producenci_id = producenci.id JOIN jednostki ON jednostki.id = materialy.Jednostki_id;
+CREATE USER 'zaopatrzenie'@'localhost' IDENTIFIED BY 'Z@op@trzenie';
+GRANT SELECT, INSERT, UPDATE, DELETE ON hurtowania.* TO 'zaopatrzenie'@'localhost';
+SHOW GRANTS FOR 'zaopatrzenie'@'localhost'

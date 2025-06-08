@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamowienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+    <main>
+        <aside id = "left">
+            <h2>Aktualizacja i zamowienia materialow</h2>
+            <p>Do wewnetrznego uzytku firmy</p>
+            <img src="obraz.png" alt="sieci komputerowe">
+        </aside>
+        <aside id = "right">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Jednostka</th>
+                        <th>Dostepna ilosc</th>
+                        <th>Aktualizacja</th>
+                        <th>Zamowianie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id = "n1">Skretka u/utp drut</td>
+                        <td>metr</td>
+                        <td id = "i1">20</td>
+                        <td><button type = submit id = "Aktualizuj" onclick="aktualizuj('i1')">Aktualizuj</button></td>
+                        <td><button type = "submit" id = "Zamow" onclick="zamow('i1')">Zamow</button></td>
+                    </tr>
+                     <tr>
+                        <td id = "n2">Skretka u/utp linka</td>
+                        <td>metr</td>
+                        <td id = "i2">2</td>
+                        <td><button type = submit id = "Aktualizuj" onclick="aktualizuj('i2')">Aktualizuj</button></td>
+                        <td><button type = "submit" id = "Zamow" onclick="zamow('i2')">Zamow</button></td>
+                    </tr>
+                     <tr>
+                        <td id = "n3">Wtyki</td>
+                        <td>sztuki</td>
+                        <td id = "i3">10</td>
+                        <td><button type = submit id = "Aktualizuj" onclick="aktualizuj('i3')">Aktualizuj</button></td>
+                        <td><button type = "submit" id = "Zamow" onclick="zamow('i3')">Zamow</button></td>
+                    </tr>
+                     <tr>
+                        <td id = "n4">Moduly</td>
+                        <td>sztuki</td>
+                        <td id = "i4">30</td>
+                        <td><button type = submit id = "Aktualizuj" onclick="aktualizuj('i4')">Aktualizuj</button></td>
+                        <td><button type = "submit" id = "Zamow" onclick="zamow('i4')">Zamow</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+    </main>
+    <footer>
+        <a href="http://sieci.pl" target="_blank">Nasza strona internetowa</a>
+        <p>Strone przygotowal: Mateusz Kowal</p>
+    </footer>
+</body>
+<script>
+let idZamowienia = 0;
+
+const iloscProduktow = [
+    document.getElementById('i1'),
+    document.getElementById('i2'),
+    document.getElementById('i3'),
+    document.getElementById('i4')
+];
+
+function sprawdzIlosc() {
+    for(let i = 0; i < iloscProduktow.length; i++) {
+        let wartosc = parseInt(iloscProduktow[i].innerText);
+        if(wartosc === 0) {
+            iloscProduktow[i].style.backgroundColor = 'red';
+        } else if(wartosc >= 1 && wartosc <= 5) {
+            iloscProduktow[i].style.backgroundColor = 'yellow';
+        } else {
+            iloscProduktow[i].style.backgroundColor = 'honeydew';
+        }
+    }
+}
+
+function aktualizuj(id) {
+    let nowaIlosc = prompt("Podaj nową ilość:");
+    if(nowaIlosc !== null) {
+        document.getElementById(id).innerText = nowaIlosc;
+        sprawdzIlosc();
+    }
+}
+
+function zamow(id) {
+    idZamowienia++;
+    let numer = id.substring(1);
+    let nazwaProduktu = document.getElementById('n' + numer).innerText;
+    let wartosc = parseInt(document.getElementById(id).innerText);
+    
+    if(wartosc === 0){
+        alert("Nie ma produktu w magazynie");
+    } else {
+        idZamowienia++;
+        alert(`Zamówienie nr: ${idZamowienia} Produkt: ${nazwaProduktu}`);
+    }
+}
+
+sprawdzIlosc();
+
+</script>
+</html>

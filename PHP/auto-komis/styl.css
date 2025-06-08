@@ -1,8 +1,5 @@
 * {
-    font-family: Roboto, Serif;
-}
-
-body {
+    font-family: 'Roboto', serif;
     margin: 0;
 }
 
@@ -15,7 +12,13 @@ header {
     padding: 10px;
 }
 
-#baner {
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#st {
     background-color: mistyrose;
     height: 300px;
     padding: 10px;
@@ -23,29 +26,31 @@ header {
     border: 1px solid crimson;
 }
 
-#baner img {
+#st img {
     float: left;
     height: 100%;
 }
 
-.blok {
+.oferty-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.generated {
     background-color: snow;
     height: 450px;
     width: 21%;
     margin: 1%;
     text-align: center;
     border: 1px solid crimson;
-    float: left;
 }
 
 footer {
     background-color: crimson;
     color: white;
-    clear: both;
-}
-
-#marki {
-    clear: both;
+    text-align: center;
+    padding: 10px;
 }
 
 img {
